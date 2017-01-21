@@ -53,4 +53,9 @@ Rails.application.configure do
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
   config.reload_classes_only_on_change = false
+
+  class Application < Rails::Application
+    config.web_console.whitelisted_ips = '10.0.2.2'
+  end
+
 end
